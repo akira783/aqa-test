@@ -1,0 +1,10 @@
+{
+  "searchCriteria": [
+    {
+      "price": 1500,
+      "location": "Paris",
+      "type": "location",
+      "propertyType": "appartement"
+    }
+  ]
+}
