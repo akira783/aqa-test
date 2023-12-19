@@ -11,5 +11,12 @@
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^19.2.0"
+  },
+  "scripts": {
+    "posttest": "npm run merge-reports",
+    "merge-reports": "mochawesome-merge cypress/reports/*.json > cypress/reports/combined-report.json",
+    "generate-report": "marge cypress/reports/combined-report.json -f report -o cypress/reports",
+    "cy:run": "cypress run",
+    "cy:report": "npm run cy:run; npm run generate-report"
   }
 }
