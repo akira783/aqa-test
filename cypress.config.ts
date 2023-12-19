@@ -23,5 +23,12 @@ export default defineConfig({
       );
       return config;
     },
+    reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: 'cypress/reports',
+      overwrite: false,
+      html: false,
+      json: true
+    },
   },
 });
